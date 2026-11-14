@@ -1,0 +1,66 @@
+{
+  "name": "makescode",
+  "version": "0.0.1",
+  "description": "A try to make local small ollama coding agents useful",
+  "keywords": [
+    "ollama",
+    "local",
+    "cli",
+    "api",
+    "ai",
+    "agents"
+  ],
+  "homepage": "https://github.com/jarvma18/makescode#readme",
+  "bugs": {
+    "url": "https://github.com/jarvma18/makescode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarvma18/makescode.git"
+  },
+  "license": "MIT",
+  "author": "Markus Järvinen",
+  "type": "module",
+  "main": "./src/index.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "pnpm@12.18.0",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.10.1",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.36.0",
+    "vitest": "^5.1.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

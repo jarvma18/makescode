@@ -31,3 +31,10 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+.typescript-setup
+
+node_modules/
+dist/
+.env
+*.log
